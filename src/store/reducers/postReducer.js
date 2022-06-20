@@ -10,7 +10,7 @@ const UPDATE_POST = "UPDATE_POST";
 export const postReducer = (state = defaultState, action) =>{
     switch(action.type){
         case LOAD_POSTS:
-            return state;
+            return {...state, posts: [...action.payload]};
         case ADD_POST:
             return state;
         case REMOVE_POST:
