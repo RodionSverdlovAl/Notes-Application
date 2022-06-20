@@ -1,3 +1,4 @@
+import '../src/App.scss'
 const App = () =>{
     return(
         <div>
