@@ -12,9 +12,9 @@ export const postReducer = (state = defaultState, action) =>{
         case LOAD_POSTS:
             return {...state, posts: [...action.payload]};
         case ADD_POST:
-            return state;
+            return {...state, posts:[action.payload, ...state.posts]};
         case REMOVE_POST:
-            return state;
+            return {...state, posts:state.posts.filter(post=>post.id !== action.payload)}
         case UPDATE_POST:
             return state;
         default:
@@ -23,3 +23,5 @@ export const postReducer = (state = defaultState, action) =>{
 }
 
 export const loadPostAction = (payload) =>({type: LOAD_POSTS, payload})
+export const addPostAction = (payload) =>({type:ADD_POST, payload})
+export const removePostAction = (payload) =>({type: REMOVE_POST, payload})

@@ -1,7 +1,49 @@
 $bg-color: rgb(230, 230, 230);
+$blue-color:rgb(67, 80, 255);
 
 *{
     margin: 0;
     padding:0;
     background-color: $bg-color;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: $blue-color;
+    position:fixed;
+    z-index: 5;
+    nav{
+        background-color: $blue-color;
+        margin-left: 35%;
+        padding: 12px 0 0 0;
+        a{
+            background-color: $blue-color;
+            margin: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-weight: 500;
+        }
+       .active{
+            color: rgb(196, 196, 196);
+            text-decoration: underline;
+        }
+    }
+}
+main{
+    position: absolute;
+    top: 50px;
+}
+
+.post_list{
+    position: absolute;
+    left: 400px;
+    
+    .post_item{
+        width: 500px;
+        margin: 15px;
+        border: 2px solid $blue-color;
+        border-radius: 10px;
+    }
 }

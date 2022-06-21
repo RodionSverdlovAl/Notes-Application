@@ -1,8 +1,4 @@
 import '../src/App.scss'
-import { useDispatch } from 'react-redux'
-import { useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import { fetchPosts } from './store/asyncActions/posts'
 import {Routes, Route} from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Homepage } from './pages/Homepage'
@@ -11,11 +7,7 @@ import { Userpage } from './pages/Userspage'
 
 const App = () =>{
 
-    // const posts = useSelector(state => state.posts.posts);
-    // const dispatch = useDispatch();
-    // useEffect(()=>{
-    //     dispatch(fetchPosts())
-    // },[])
+   
 
     return(
         <div>

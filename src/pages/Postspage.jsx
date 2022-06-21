@@ -1,7 +1,12 @@
+
+import PostForm from "../components/PostForm"
+import PostList from "../components/PostList"
+
 const Postpage = () =>{
     return(
         <div>
-            post page
+               <PostList/>
+               <PostForm/>
         </div>
     )
 }
