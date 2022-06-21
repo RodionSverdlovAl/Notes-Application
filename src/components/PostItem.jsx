@@ -1,20 +1,49 @@
-import { useDispatch } from "react-redux"
-import { removePostAction } from "../store/reducers/postReducer";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux"
+import { editPostAction, removePostAction } from "../store/reducers/postReducer";
 
 const PostItem = ({post}) =>{
+    const [title, setTitle] = useState(post.title);
+    const [body, setBody] = useState(post.body);
+    const [id, setId] = useState(post.id);
+    const [edit, setEdit] = useState(false);
 
     const dispatch = useDispatch();
+    const posts = useSelector(state=>state.posts.posts);
+
 
     const removePost =(post) =>{
         console.log(post.id)
         dispatch(removePostAction(post.id))
     }
+    const editPost = () =>{
+        setEdit(true);
+    }
+
+
+    const updatePost = () =>{
+        setEdit(false);
+        for(let i=0; i<posts.length; i++){
+            if(posts[i].id === id){
+                posts[i].title = title;
+                posts[i].body = body;
+            }
+        }
+        dispatch(editPostAction(posts))
+    }
+
     return(
         <div className="post_item">
-            <h3>{post.title}</h3>
-            <p>{post.body}</p>
+            <h3>{title}</h3>
+            <p>{body}</p>
             <button onClick={()=>removePost(post)}>Delete</button>
-            <button>Edit</button>
+            {edit 
+            ?<div>
+                <input type="text" value={title} onChange = {e=> setTitle(e.target.value)} /><br/>
+                <input type="text" value = {body} onChange = {e=> setBody(e.target.value)} /><br/>
+                <button  onClick={()=>updatePost()}>edit</button>
+            </div>
+            :<button onClick={()=>editPost()}>Edit</button>}
         </div>
     )
 }
