@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { addPostAction } from "../store/reducers/postReducer";
+import { addPostAction, sortPostsAction } from "../store/reducers/postReducer";
 import { useDispatch } from "react-redux";
 
 const PostForm = () =>{
@@ -8,6 +8,9 @@ const PostForm = () =>{
     const [body, setBody] = useState('');
     const dispatch = useDispatch();
 
+    const sortPosts = () =>{
+        dispatch(sortPostsAction())
+    }
 
     const addPost = (e) =>{
         e.preventDefault();
@@ -30,6 +33,7 @@ const PostForm = () =>{
             <input value={title} onChange = {e=>setTitle(e.target.value)} type="text" placeholder="Enter post title" /><br />
             <input value={body} onChange ={e=>setBody(e.target.value)} type="text" placeholder="Enter post body"/><br />
             <button onClick= {addPost}>Add post</button>
+            <button onClick={sortPosts}>Sort posts</button>
         </div>
     )
 }
