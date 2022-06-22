@@ -1,12 +1,12 @@
 const defaultState = {
-    users: [],
+    users:[],
 }
 
 const LOAD_USERS = "LOAD_USERS";
 
 
 export const usersReducer = (state = defaultState, action) =>{
-    switch(action.payload){
+    switch(action.type){
         case LOAD_USERS:
             return{...state, users: [...action.payload]} 
         default:

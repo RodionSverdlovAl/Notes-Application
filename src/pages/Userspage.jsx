@@ -1,7 +1,23 @@
+import { useState } from "react"
+import CreateUserForm from "../components/CreateUserForm";
+import UsersList from "../components/UsersList"
+
 const Userpage = () =>{
+
+    const [add, setAdd] = useState(false);
+    
     return(
         <div>
-            user page
+            <UsersList/>
+            
+            {add 
+            ? <div>
+                <CreateUserForm setAdd = {setAdd}/>
+                
+              </div>
+            :
+             <button onClick={()=>setAdd(true)}>create user</button>
+             }
         </div>
     )
 }
