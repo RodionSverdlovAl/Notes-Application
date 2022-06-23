@@ -9,11 +9,9 @@ const Userpage = () =>{
     return(
         <div>
             <UsersList/>
-            
             {add 
             ? <div>
                 <CreateUserForm setAdd = {setAdd}/>
-                
               </div>
             :
              <button className="create-user-button" onClick={()=>setAdd(true)}>CREATE USER</button>

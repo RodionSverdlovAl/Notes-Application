@@ -91,12 +91,14 @@ const CreateUserForm = ({setAdd}) =>{
         <div className="UserForm">
             <div className="user-form-container">
                 <button className="close" onClick={close}>X</button>
-                <input type="text" value={name} onChange={e=>setName(e.target.value)} placeholder="Enter user name and surname "/><br/>
-                <input type="text" value={username} onChange = {e=>setUsername(e.target.value)}  placeholder="Enter username"/><br/>
-                <input type="email" value={email} onChange = {e=>setEmail(e.target.value)} placeholder="Enter user email"/><br/>
-                <input type="text" value = {phone} onChange = {e=>setPhone(e.target.value)} placeholder="Enter phone number"/><br/>
-                <input type="text" value = {city} onChange = {e=>setCity(e.target.value)} placeholder="Enter city"/><br/>
-                <input type="text" value={street} onChange = {e=>setStreet(e.target.value)} placeholder="Enter street"/><br/>
+                <form>
+                    <input type="text" value={name} onChange={e=>setName(e.target.value)} placeholder="Enter user name and surname "/><br/>
+                    <input type="text" value={username} onChange = {e=>setUsername(e.target.value)}  placeholder="Enter username"/><br/>
+                    <input type="email" value={email} onChange = {e=>setEmail(e.target.value)} placeholder="Enter user email"/><br/>
+                    <input type="text" value = {phone} onChange = {e=>setPhone(e.target.value)} placeholder="Enter phone number"/><br/>
+                    <input type="text" value = {city} onChange = {e=>setCity(e.target.value)} placeholder="Enter city"/><br/>
+                    <input type="text" value={street} onChange = {e=>setStreet(e.target.value)} placeholder="Enter street"/><br/>
+                </form>
                 <button className="create-btn" onClick={createUser}>Create</button>
             </div>
            

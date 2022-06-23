@@ -13,7 +13,7 @@ const PostList = () =>{
     },[])
 
     return(
-        <div className="post_list">
+        <div className="list">
             <h3>Post count: {posts.length}</h3>
             {posts.length>0 ?posts.map(post=><PostItem key = {post.id} post ={post}/>) : <h2>Post list is empty!</h2>}
         </div>

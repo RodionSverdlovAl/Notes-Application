@@ -33,13 +33,15 @@ const PostItem = ({post}) =>{
     }
 
     return(
-        <div className="post_item">
+        <div className="item">
             <h3>{title}</h3>
             <p>{body}</p>
             <button onClick={()=>removePost(post)}>Delete</button>
             {edit 
             ?<div>
+                <h3>Title</h3>
                 <input type="text" value={title} onChange = {e=> setTitle(e.target.value)} /><br/>
+                <h3>Body</h3>
                 <input type="text" value = {body} onChange = {e=> setBody(e.target.value)} /><br/>
                 <button  onClick={()=>updatePost()}>edit</button>
             </div>

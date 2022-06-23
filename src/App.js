@@ -6,9 +6,7 @@ import { Postpage } from './pages/Postspage'
 import { Userpage } from './pages/Userspage'
 
 const App = () =>{
-
-   
-
+    
     return(
         <div>
            <Routes>

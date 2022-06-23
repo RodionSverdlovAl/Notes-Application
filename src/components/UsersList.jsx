@@ -14,7 +14,7 @@ const UsersList =() =>{
      },[])
 
     return(
-        <div className="user_list">
+        <div className="list">
             {users.map(user =><UserItem key={user.id} user={user}/>)}
         </div>
     )

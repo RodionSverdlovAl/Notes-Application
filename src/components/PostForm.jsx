@@ -29,7 +29,7 @@ const PostForm = () =>{
     }
 
     return(
-        <div>
+        <div className="post_form">
             <input value={title} onChange = {e=>setTitle(e.target.value)} type="text" placeholder="Enter post title" /><br />
             <input value={body} onChange ={e=>setBody(e.target.value)} type="text" placeholder="Enter post body"/><br />
             <button onClick= {addPost}>Add post</button>
