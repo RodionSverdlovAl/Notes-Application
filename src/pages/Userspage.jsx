@@ -16,7 +16,7 @@ const Userpage = () =>{
                 
               </div>
             :
-             <button onClick={()=>setAdd(true)}>create user</button>
+             <button className="create-user-button" onClick={()=>setAdd(true)}>CREATE USER</button>
              }
         </div>
     )

@@ -1,4 +1,8 @@
 const UserItem = ({user}) =>{
+
+
+    
+
     return(
         <div className="user_item">
             <h3>{user.name}</h3>
