@@ -15,7 +15,11 @@ const UsersList =() =>{
 
     return(
         <div className="list">
-            {users.map(user =><UserItem key={user.id} user={user}/>)}
+            <h3>Users count: {users.length}</h3>
+            {users.length > 0 ? users.map(user =><UserItem key={user.id} user={user}/>)
+            : <h3>Users List in empty</h3>
+            }
+            
         </div>
     )
 }

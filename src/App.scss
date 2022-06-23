@@ -174,3 +174,50 @@ main{
         cursor: pointer;
     }
 }
+
+.home-page{
+    margin-left: 50%;
+    width: 600px;
+    h3{
+        text-align: center;
+        margin-top: 10px;
+        
+    }
+    .app_info{
+        margin: 5px 10px;
+        font-size: 18px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    .using_technologies{
+        margin: 5px 10px;
+        font-size: 18px;
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+        ul{
+            margin-left: 20px;
+            background-color: #fff ;
+            li{
+                background-color: #fff ;
+            }
+        }
+    }
+    .developer_info{
+        display: flex;
+        img{
+            border-radius: 100px;
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+        }
+        .info{
+            margin-top: 50px;
+            a{
+                margin: 10px
+            }
+        }
+        
+    }
+}
